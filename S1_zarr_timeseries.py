@@ -1,12 +1,8 @@
 import xarray as xr
-import rioxarray
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import glob
 import os
-import contextily as ctx
-import zarr
 import geopandas as gpd
 import utm
 import mgrs
