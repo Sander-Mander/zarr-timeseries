@@ -64,10 +64,11 @@ lat, lon = utm.to_latlon(easting, northing, zone_number=19, northern=False) # Sp
 print(f"Point: East {easting} North {northing} | Lon {lon} Lat {lat}")
 
 # Read MGRS tile name based on lon, lat
-#lat, lon =
+# lat, lon = 
+easting, northing, _, _ = utm.from_latlon(lat, lon)
 m = mgrs.MGRS()
 tile_id = m.toMGRS(lat, lon, MGRSPrecision=0)
-print(f"Tile: {tile_id}")
+print(f"Tile: {tile_id} | Easting: {easting}, Northing: {northing}")
 group_path = f"{tile_id}/measurements"
 
 
